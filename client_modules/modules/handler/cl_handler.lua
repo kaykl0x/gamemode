@@ -47,7 +47,7 @@ GM.Death = false
 -- Skin 
 
 GM.Skin = nil
-GM.MaxPlayers = GetConvarInt('sv_maxclients', 32)
+GM.MaxPlayers = GetConvarInt('sv_maxclients', 48)
 
 RegisterNetEvent("gamemode:playerLoadedClient")
 AddEventHandler("gamemode:playerLoadedClient", function(player)
