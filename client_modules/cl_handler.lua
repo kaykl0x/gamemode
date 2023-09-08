@@ -1,0 +1,20 @@
+GM = {}
+GM.Spawned = false 
+GM.Source = nil 
+GM.Name = "John doe" or GM.Name
+GM.Group = "user" or GM.Group
+GM.Job = {}
+GM.State = {}
+GM.State.JobRank = 0 
+GM.Organization = {}
+GM.Rank = 0 
+GM.Money = nil 
+GM.BlackMoney = nil
+GM.Bank = nil 
+GM.Inventory = {}
+GM.Weight = 40
+GM.Token = nil 
+
+GM.Soif = 100 
+GM.Faim = 100 
+GM.Death = false 
