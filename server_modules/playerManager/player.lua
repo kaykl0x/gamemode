@@ -141,9 +141,14 @@ function GM:CreateCharacter(license, firstName, lastName, position, dead, status
         return self.inventory
     end
 
-    self.getInventoryWeight = function()
-        return self.weight
-    end
+    -- self.getInventoryWeight = function()
+    --     local inventory = self.getInventory()
+    --     local count = 0 
+    --     for k,v in pairs(inventory) do
+    --         count = count + (v.count * v.item.weight)
+    --     end
+    --     return self.weight
+    -- end
 
     self.getInventoryWeightMax = function()
         return self.weightMax
