@@ -52,7 +52,7 @@ GM.MaxPlayers = GetConvarInt('sv_maxclients', 48)
 RegisterNetEvent("gamemode:playerLoadedClient")
 AddEventHandler("gamemode:playerLoadedClient", function(player)
 
-    local found = bool 
+    local found = false
     local pPed = PlayerPedId()
 
     while not pPed do 
@@ -64,27 +64,3 @@ AddEventHandler("gamemode:playerLoadedClient", function(player)
     print(json.encode(player))
 
 end)
-
--- Citizen.CreateThread(function()
---     while true do 
---         Wait(1)
---         if IsEntityDead(PlayerPedId()) then 
---             GM.Death = true 
---         else 
---             GM.Death = false 
---         end
---     end
--- end)
-
-
--- function GM:Coma()
---     if GM.Death then 
---         SetEntityHealth(PlayerPedId(), 0)
---         FreezeEntityPosition(PlayerPedId(), true)
---         SetPedCanRagdoll(PlayerPedId(), false)
---         print("is Dead")
---         SetTimeout(5000, function()
---             GM.Death = false 
---         end)
---     end
--- end
