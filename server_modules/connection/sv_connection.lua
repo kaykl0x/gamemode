@@ -8,7 +8,7 @@ function GM:CreateUser(license, src)
         end
         if not result[1] then 
             exports.mongodb:count({ collection="users", query = {}, options = {}}, function(success, result) 
-                exports.mongodb:insertOne({ collection="users", document = { license = license, firstName = "John", lastName = "Doe", position = nil, dead = false, status = {"hunger": 100, "thurst": 100}, sex = nil, height = 0, health = 150, armour = 0, dateofbirth = "00/00/00", money = GM.StartMoney, blackMoney = 0, bank = 0, credits = 0, inventory = json.encode(GM.ArrayStartItems), xp = 0, group = "user", valuables = json.encode(GM.ArrayStartValuables), skin = json.encode(GM.ArrayStartSkin), uuid = result + 1, weight = 0, weightMax = 40, job = "unemployed", jobRank = 0, crew = nil, crewRank = 0, role = "user", banarme = false, vehicleKeys = {} } }, function (success, result, insertedIds)
+                exports.mongodb:insertOne({ collection="users", document = { license = license, firstName = "John", lastName = "Doe", position = nil, dead = false, status = {"hunger" == 100, "thurst" == 100}, sex = nil, height = 0, health = 150, armour = 0, dateofbirth = "00/00/00", money = GM.StartMoney, blackMoney = 0, bank = 0, credits = 0, inventory = json.encode(GM.ArrayStartItems), xp = 0, group = "user", valuables = json.encode(GM.ArrayStartValuables), skin = json.encode(GM.ArrayStartSkin), uuid = result + 1, weight = 0, weightMax = 40, job = "unemployed", jobRank = 0, crew = nil, crewRank = 0, role = "user", banarme = false, vehicleKeys = {} } }, function (success, result, insertedIds)
                     if not success then
                         return
                     end
